@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Klaudia Kulas</title>
+        <link rel='icon' type="image/x-icon" href="static/luden2.ico" />
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+
+    <!--<div id="logo">
+        <img id="logo" src="static/KK.png" alt="logo">
+    </div>-->
+
+    <body>
+
+        <nav>
+            <ul>
+                <li id="navName"><img id="icon" src="static/luden.png" alt="Logo"><a>Klaudia Kulas</a></li>
+                <li id="links"><a href="index.html">Home</a></li>
+                <li id="links"><a href="#aboutMe">About Me</a></li>
+                <li id="links"><a href="my_artwork.html">My Artwork</a></li>
+                <li id="links"><a href="games.html">Games</a></li>
+            </ul>
+        </nav>
+        
+        <div id="container">
+        </div>
+
+        <main>
+            <section id="sect1">
+                <div id="part1">
+                    <h2>Klaudia Kulas</h2>
+                    <div id="divider"></div>
+                    <p id="text">
+                        Computer Science Student and Hobby Illustrator <br> <br>
+                        I am a <em>self taught</em> artist with a <em>lifelong</em> interest in design and its impact on the <br>
+                        <b>user experience</b>. I love bringing my creativity into technology and watching my <br>
+                        projects come to life.
+                    </p>
+                    <button id="btn"><a href="#aboutMe">Learn more</a></button>
+                </div>
+                <aside>
+                    <img id="monkey" src="static/klaudiamonkey.png" alt="Self Portrait">
+                </aside>
+            </section>
+
+            <div id="aboutMe"></div> <!--When you scroll to the about me section, this makes sure the title is not covered by the nav-->
+
+            <section id="sect2" class="container reveal fade-bottom">
+
+                <h2>About Me</h2>
+
+                <div id="divider"></div>
+                <p id="text">I am a 20 year old Computer Science student living in Cork, Ireland. <br>
+                I was born in Poland, but moved at a young age. In my early years I discovered an interest in art. <br>
+                I loved to create and watch my ideas come to life on paper! As I grew up I sprinkled <br>
+                my creativity into everything I did. After highschool I decided I would like to pursue a career in technology <br>
+                and share my creations digitally. <br>
+                <br>
+                Now I am a hobby digital artist and computer science student. <br>
+                I will continue to expand my horizon and discover new ways of sharing my creativity with the world! <br></p>
+
+                <div id="part2">
+                    <aside id="portraitContainer">
+                        <img id="portrait" src="static/portrait.png" alt="Portrait">
+                    </aside>
+
+                    <div id="part3">
+                        <h3>Achievements</h3>
+                        <div id="divider"></div>
+                        <table>
+                            <tr id="tableColor">
+                                <th>Winning UCC Hackathon 2022</th>
+                                <td>My colleague and I teamed up to develop another game for the coding competition again. The game, "Wander", had an emphasis on visual aesthetics and design. We were very proud with the end result and second first place in a row!</td>
+                            </tr>
+                            <tr>
+                                <th>Winning UCC Hackathon 2020</th>
+                                <td>In a team, we developed a game for the college coding competition. We created an educational game "Monke Go Study". I was in charge of the visual design of the game, illustrating sprites/backgrounds/logos with PaintTool SAI.</td>
+                            </tr>
+                            <tr id="tableColor">
+                                <th>Restaurant Logo 2019</th>
+                                <td>A connection of mine opened a new restaurant "Indian Ocean" in Mallow, Ireland, and was looking for a logo to advertise it. Seeing my own design on a building was a very empowering experience.</td>
+                            </tr>
+                            <tr>
+                                <th>Teen Graphic Novel 2018</th>
+                                <td>The Teen Graphic Novel event allowed young artists to come together and create a comic book for Cork City Libraries. I was chosen to illustrate the cover for the 2018 edition of the comic. Working with various artists and hearing their ideas was a very interesting and fun experience.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="sect3" class="container reveal fade-bottom">
+                <h2>About This Website</h2>
+
+                <div id="divider"></div>
+
+                <p id="text">
+                    This website was fully developed by me. <br>
+                    HTML 5, CSS and JavaScript were used to develop this website, but I'd <br>
+                    like to expand my ability and implement a wider range of languages into my work. <br>
+                    <br>
+                    After a few years of learning various coding languages and programming skills, <br>
+                    HTML and CSS particularly stood out to me. Being able to develop something <br>
+                    from scratch and watching it progress as you code made me fall <br>
+                    in love with the languages and I hope to do much more work with them in the future.
+                </p>
+            </section>
+
+            <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><img src="static/arrow.png"></button>
+    
+        </main>
+
+        <footer>
+            <ul>
+                <li id="fText"><a>Klaudiadiana.k@gmail.com</a></li>
+                <li id="fText"><a>All content © Klaudia Kulas 2022</a></li>
+                <div id="appLinks">
+                    <li id="appLink"><a href="mailto:klaudiadiana.k@gmail.com"><img src="static/gmail.png" alt="Email"></a></li>
+                    <li id="appLink"><a href="https://www.linkedin.com/in/klaudia-kulas-41a878206/"><img src="static/linkedin.png" alt="Linked In"></a></li>
+                    <li id="appLink"><a href="https://twitter.com/Luden_css"><img src="static/twitter.png" alt="Twitter"></a></li>
+                    <li id="appLink"><a href="https://www.artstation.com/okluden"><img src="static/artstation.png" alt="Art Station"></a></li>
+                </div>
+            </ul>
+        </footer>
+
+        <script>
+
+            //Reveal on scroll 
+            //made by https://alvarotrigo.com/blog/css-animations-scroll/
+
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+
+
+            //Scroll to top button
+
+            var scrollButton = document.getElementById("scrollBtn")
+
+            window.onscroll = function() {showBtn()};
+
+            function showBtn() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollButton.style.display = "block";
+                } else {
+                    scrollButton.style.display = "none";
+                }
+            }
+
+            var rootElement = document.documentElement
+
+            function scrollToTop() {
+                rootElement.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                })
+            }
+
+            scrollButton.addEventListener("click", scrollToTop)
+            
+        </script>
+
+    </body>
+
+</html>

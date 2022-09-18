@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Klaudia Kulas | Games</title>
+        <link rel='icon' type="image/x-icon" href="static/luden2.ico" />
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+
+    <!--<div id="logo">
+        <img id="logo" src="static/KK.png" alt="logo">
+    </div>-->
+
+    <body>
+
+        <nav>
+            <ul>
+                <li id="navName"><img id="icon" src="static/luden.png" alt="Logo"><a>Klaudia Kulas</a></li>
+                <li id="links"><a href="index.html">Home</a></li>
+                <li id="links"><a href="index.html#aboutMe">About Me</a></li>
+                <li id="links"><a href="my_artwork.html">My Artwork</a></li>
+                <li id="links"><a href="games.html">Games</a></li>
+            </ul>
+        </nav>
+        
+        <div id="container">
+        </div>
+
+        <main>
+            <section id="sect1">
+                <div id="part4">
+                    <h2>Games</h2>
+                    <div id="divider"></div>
+                    <p id="text">COMING SOON<br>
+                    This section will contain a JavaScript game developed by me!</p>
+                </div>
+
+            </section>
+
+            <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><img src="static/arrow.png"></button>
+    
+        </main>
+
+        <footer>
+            <ul>
+                <li id="fText"><a>Klaudiadiana.k@gmail.com</a></li>
+                <li id="fText"><a>All content © Klaudia Kulas 2022</a></li>
+                <div id="appLinks">
+                    <li id="appLink"><a href="mailto:klaudiadiana.k@gmail.com"><img src="static/gmail.png" alt="Email"></a></li>
+                    <li id="appLink"><a href="https://www.linkedin.com/in/klaudia-kulas-41a878206/"><img src="static/linkedin.png" alt="Linked In"></a></li>
+                    <li id="appLink"><a href="https://twitter.com/Luden_css"><img src="static/twitter.png" alt="Twitter"></a></li>
+                    <li id="appLink"><a href="https://www.artstation.com/okluden"><img src="static/artstation.png" alt="Art Station"></a></li>
+                </div>
+            </ul>
+        </footer>
+
+        <script>
+
+            //Reveal on scroll 
+            //made by https://alvarotrigo.com/blog/css-animations-scroll/
+
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+
+
+            //Scroll to top button
+
+            var scrollButton = document.getElementById("scrollBtn")
+
+            window.onscroll = function() {showBtn()};
+
+            function showBtn() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollButton.style.display = "block";
+                } else {
+                    scrollButton.style.display = "none";
+                }
+            }
+
+            var rootElement = document.documentElement
+
+            function scrollToTop() {
+                rootElement.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                })
+            }
+
+            scrollButton.addEventListener("click", scrollToTop)
+            
+        </script>
+
+    </body>
+
+</html>
